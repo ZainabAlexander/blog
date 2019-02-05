@@ -3,6 +3,29 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
+a{
   color: #00B7FF;
+}
+.navbar-light .navbar-nav .nav-link{
+  color:blue;
+}
+
+#hero_image{
+  height:500px;
+  background-image: url(https://images-gmi-pmc.edge-generalmills.com/087d17eb-500e-4b26-abd1-4f9ffa96a2c6.jpg);
+  background-repeat: repeat-x;
+  width:100%;
+}
+
+.card {
+  height:600px;
+}
+
+.card-body{
+  margin-top:30px;
+}
+
+img{
+width:350px;
+height:400px;
 }
