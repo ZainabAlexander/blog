@@ -3,53 +3,20 @@
 
 <head>
   <title></title>
-  <link rel="stylesheet" href="main.css">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
+  <% include ./partials/head %>
 
 </head>
 
 <body>
-  <!--Navigation Bar Section-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Archive</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Create</a>
-          </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up!</button>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In!</button>
-      </form>
-    </div>
-  </nav>
+  <% include ./partials/nav %>
   <!--Banner  Section-->
 
   <section class="jumbotron text-center" id="hero_image">
     <div class="container" id="container">
 
       <h1 class="jumbotron-heading">
-        Let's Get Baked!
-        <!-- <%= title %> -->
+        Wake and Bake
+        
       </h1>
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc.
         Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
@@ -70,7 +37,9 @@
               <rect fill="#55595c" width="100%" height="100%" /><text fill="#eceeef" dy=".3em" x="50%" y="50%">Thumbnail</text>
             </svg>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus dolores sapiente eaque quas voluptatum suscipit laudantium itaque voluptates nam, accusantium odit dolorum ut nostrum sit totam ipsa ad consequatur.</p>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus
+                dolores sapiente eaque quas voluptatum suscipit laudantium itaque voluptates nam, accusantium odit
+                dolorum ut nostrum sit totam ipsa ad consequatur.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -92,11 +61,13 @@
               <rect fill="#55595c" width="100%" height="100%" /><text fill="#eceeef" dy=".3em" x="50%" y="50%">Thumbnail</text>
             </svg>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, aliquam provident! Fuga, doloribus! Ipsam, quibusdam dolorem recusandae doloremque laborum accusamus reprehenderit velit repellendus, itaque eius ducimus, voluptates temporibus dolorum assumenda!</p>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, aliquam
+                provident! Fuga, doloribus! Ipsam, quibusdam dolorem recusandae doloremque laborum accusamus
+                reprehenderit velit repellendus, itaque eius ducimus, voluptates temporibus dolorum assumenda!</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="update">Edit</button>
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
@@ -114,7 +85,9 @@
               <rect fill="#55595c" width="100%" height="100%" /><text fill="#eceeef" dy=".3em" x="50%" y="50%">Thumbnail</text>
             </svg>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, possimus! Ex, expedita deserunt amet aut porro aliquam iure repellat, fugiat corrupti quas aperiam in commodi asperiores nisi labore dolor voluptas..</p>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, possimus! Ex,
+                expedita deserunt amet aut porro aliquam iure repellat, fugiat corrupti quas aperiam in commodi
+                asperiores nisi labore dolor voluptas..</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
