@@ -1,55 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Hero App | New</title>
-
+    <% include partials/head %>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
 
-    <style>
-        body { padding-top:15px; background-color: #ccc;}
-        img { width: 100%;}
-    </style>
+    <!-- include summernote css/js -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
+
 </head>
+
 <body>
+    <!--Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="navLink" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="navLink" href="/archive">Archive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="navLink" href="/create">Create</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button id="login" class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In!</button>
+            </form>
+        </div>
+    </nav>
 
     <div class="container">
-        <div class="panel panel-danger">
+
+        <div class="panel panel-danger" id="panel">
             <div class="panel panel-heading text-center">
-                <h1>It's Add A New Hero Time.</h1>
+                <h1>Hello There!!</h1>
             </div>
-            <div class="panel-body" id="all">
 
-                <% if (message) { %>
-                <div class="alert alert-success" role="alert">
-                    <%= message %>
+            <form method="POST" action="">
+                <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <label for="exampleInputName">Name of POST</label>
+                    <input type="text" class="form-control click2edit" id="exampleInputName" aria-describedby="heroName"
+                        placeholder="Enter Hero Name" name="name">
+                    <!-- <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small>  -->
                 </div>
-                <% } %> 
-                
-                <form method="POST" action="">
+                <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <label for="exampleInputIngredients">ingredients</label>
+                    <input type="text" class="form-control click2edit" id="exampleInputIngredients" placeholder="Ingredients List"
+                        name="ingredients">
+                </div>
 
-                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
-                        <label for="exampleInputName">Recipe name Name</label>
-                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Enter Hero Name" name="name">
-                        <!-- <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                    </div>
-                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
-                        <label for="exampleInputURL">recipe URL</label>
-                        <input type="text" class="form-control" id="exampleInputURL" placeholder="Link to hero image" name="image_url">
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-                        <button type="submit" class="btn btn-success btn-block">Add recipe</button>
-                    </div>
+                <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <label for="exampleInputRecipe">recipe</label>
+                    <input type="text" class="form-control click2edit" id="exampleInputRecipe" placeholder="Recipe method"
+                        name="recipe">
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <label for="exampleInputURL">Image URL</label>
+                    <input type="text" class="form-control click2edit" id="exampleInputURL" placeholder="Link to image"
+                        name="image_url">
+                </div>
 
-                </form>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                    <button type="submit" class="btn btn-success btn-block" id="button">ADD A POST</button>
+                </div>
+            </form>
 
-            </div>
-            <div class="panel-footer text-center">
-                <p>All rights reserved 2018 | Nate.</p>
-            </div>
         </div>
+
+
     </div>
+    <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit </button>
+    <button id="save" class="btn btn-primary" onclick="save()" type="button">Save </button>
+
+    <script>
+        $(document).ready(function () {
+            $('#summernote').summernote();
+        });
+        var edit = function () {
+            $('.click2edit').summernote({ focus: true });
+        };
+        var save = function () {
+            var markup = $('.click2edit').summernote('code');
+            $('.click2edit').summernote('destroy');
+        };
+    </script>
 
 </body>
+
 </html>

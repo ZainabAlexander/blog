@@ -3,12 +3,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a{
-  color: #00B7FF;
-}
-.navbar-light .navbar-nav .nav-link{
-  color:blue;
-}
 
 #hero_image{
   height:500px;
@@ -26,7 +20,70 @@ a{
   margin-top:30px;
 }
 
-img{
-width:350px;
-height:400px;
+
+#navLink{
+  color:#fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:20px;
+  font-weight:700;
+  
+}
+a:hover{
+color:#2cc1c0;
+}
+
+
+#navigation{
+  background-color:#2cc1c0;
+}
+
+#panel{
+  border:none;
+}
+
+/* Button Styling */
+#button {
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  background-color: #fe7095;
+  border-color: #fe7095;
+  height: 55px;
+  border-radius: 4px;
+  margin: 0px;
+  padding: 6px 22px;
+  width: 100%;
+}
+
+
+#edit{
+  color: #fff;
+  background-color:#2cc1c0 ;
+  border-color:#2cc1c0 ;
+;
+}
+
+#save{
+  color: #fff;
+  background-color: #fe7095;
+  border-color:#fe7095 ;
+  border-radius: 4px;
+}
+
+#login{
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  background-color: #fe7095;
+  border-color: #fe7095;
+  height: 55px;
+  border-radius: 4px;
+  margin: 90%;
+  padding: 6px 22px;
+}
+
+#myBtn{
+  color: #fff;
+  background-color:#fe7095 ;
+  border-color:#fe7095 ;
 }

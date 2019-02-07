@@ -4,6 +4,15 @@
 <head>
   <title></title>
   <% include ./partials/head %>
+  <style>
+    img{
+    width:350px;
+    height:400px; 
+     }
+     #more {
+       display: none;
+      }
+  </style>
 
 </head>
 
@@ -16,7 +25,7 @@
 
       <h1 class="jumbotron-heading">
         Wake and Bake
-        
+
       </h1>
       <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc.
         Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
@@ -30,20 +39,44 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img src="https://thekittchen.com/wp-content/uploads/2017/03/How-to-Make-Cake-Pops-13-600x900.jpg" alt="">
+            <img src="https://i.pinimg.com/originals/e5/96/98/e596989e32dd82c10584e7706e096948.jpg" alt="">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail" id="fudge_image">
-              <title>Placeholder</title>
+              <title>hrrry</title>
               <rect fill="#55595c" width="100%" height="100%" /><text fill="#eceeef" dy=".3em" x="50%" y="50%">Thumbnail</text>
             </svg>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus
-                dolores sapiente eaque quas voluptatum suscipit laudantium itaque voluptates nam, accusantium odit
-                dolorum ut nostrum sit totam ipsa ad consequatur.</p>
+
+              <p class="card-text">
+
+                <h1>Fudgy Brownies</h1>
+                <span id="dots">...</span><span id="more">
+                  Preheat the oven to 350°F (180°C). Line an 8-inch square baking dish with parchment paper.
+                  <br>
+                  Chop the chocolate into chunks. Melt half of the chocolate in the microwave in 20-second intervals,
+                  saving the other half for later.
+                  <br>
+                  In a large bowl, mix the butter and sugar with an electric hand mixer, then beat in the eggs and
+                  vanilla for 1-2 minutes, until the mixture becomes fluffy and light in color.
+                  <br>
+                  Whisk in the melted chocolate (make sure it's not too hot or else the eggs will cook), then sift in
+                  the flour, cocoa powder, and salt. Fold to incorporate the dry ingredients, being careful not to
+                  overmix as this will cause the brownies to be more cake-like in texture.
+                  <br>
+                  Fold in the chocolate chunks, then transfer the batter to the prepared baking dish.
+                  <br>
+                  Bake for 20-25 minutes, depending on how fudgy you like your brownies, then cool completely.
+                  <br>
+                  Slice, then serve with a nice cold glass of milk.
+                </span>
+              </p>
+              <br>
+              <br>
+              <br>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="myBtn" onclick="myFunction()">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="edit">Edit</button>
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
@@ -61,13 +94,39 @@
               <rect fill="#55595c" width="100%" height="100%" /><text fill="#eceeef" dy=".3em" x="50%" y="50%">Thumbnail</text>
             </svg>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, aliquam
-                provident! Fuga, doloribus! Ipsam, quibusdam dolorem recusandae doloremque laborum accusamus
-                reprehenderit velit repellendus, itaque eius ducimus, voluptates temporibus dolorum assumenda!</p>
+              <p class="card-text">
+                <h1>Oreo Red Velvet Cupcakes</h1>
+                <span id="dots">...</span><span id="more">
+                  Preheat oven to 350 degrees and line pans with cupcake lines.
+                  <br>
+                  Sift cake mix into a small bowl and set aside.
+                  <br>
+                  In a large bowl, combine eggs, oil, sour cream, buttermilk and vanilla extract until smooth.
+                  <br>
+                  Stir in cake mix.
+                  <br>
+                  Take your Oreos and place one at the bottom of each cupcake liner. (If you are afraid your oven will
+                  get to hot on the bottom you can always chop them up and fold them into the batter!)
+                  Scoop batter over each Oreo to fill the liners about 3/4 full.
+                  Bake for 15-20 minutes or until an inserted knife comes out clean.
+                  Let cool.
+                  <br>
+                  Oreo Frosting: Take your Oreo cookies (just the chocolate pieces and not the filling) and crush in a
+                  plastic bag using a rolling pin. If you have a food processor that works the best! Sift your finely
+                  crushed Oreos to remove any lumps, because if you use a piping bag any big cookie pieces will clog
+                  it. In a stand mixer, beat butter and cream cheese. Add vanilla extract and slowly add powdered sugar
+                  until you reach your desired consistency. Fold in crushed Oreos. Don't stir too much or the frosting
+                  will turn a gross (yet delicious) grey color.
+                  <br>
+                  Pipe onto cooled cupcakes and top with extra Oreos.
+                </span>
+              </p>
+              <br>
+
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary" id="update">Edit</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="myBtn">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="edit">Edit</button>
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
@@ -78,26 +137,85 @@
 
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img src="https://i.pinimg.com/originals/e5/96/98/e596989e32dd82c10584e7706e096948.jpg" alt="">
+            <img src="https://thekittchen.com/wp-content/uploads/2017/03/How-to-Make-Cake-Pops-13-600x900.jpg" alt="">
+
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
               <title>Placeholder</title>
               <rect fill="#55595c" width="100%" height="100%" /><text fill="#eceeef" dy=".3em" x="50%" y="50%">Thumbnail</text>
             </svg>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, possimus! Ex,
-                expedita deserunt amet aut porro aliquam iure repellat, fugiat corrupti quas aperiam in commodi
-                asperiores nisi labore dolor voluptas..</p>
+              <p class="card-text">
+                <h1>Rainbow Cake Pops </h1>
+                <span id="dots">...</span><span id="more">
+                Preheat oven to 350 degrees.
+                <br>
+                Bake the cake:
+                <br>
+                Cream the butter and sugar with an electric mixer until pale and fluffy. Add the vanilla extract, egg,
+                and salt, and mix to combine.
+                <br>
+                In a separate bowl, combine the flour and baking powder. Add this to the wet mixture in 2 additions,
+                alternating with the milk.
+                <br>
+                Divide the batter into 6 bowls and dye it the colors of the rainbow. Pour the batter into a cupcake tin
+                lined with cupcake liners, making sure to not mix the colors.
+                <br>
+                Bake in oven for 15 minutes. Let cakes cool completely.
+                <br>
+                Build the cake pops:
+                <br>
+                Weigh 60 grams of each color of cake and crumble them into individual bowls.
+                <br>
+                Pour 100 grams white chocolate chips and whipping cream into a small pot and set to medium heat.
+                <br>
+                Stir constantly until the chocolate has melted, then divide evenly between the cake. Stir until the
+                cake is fully coated in the chocolate mixture.
+                <br>
+                Place a sheet of plastic wrap on your cooking surface and stack small disks of each color of cake on
+                top of each other in the order of the rainbow.
+                <br>
+                Wrap the plastic wrap around the cake and shape into a ball. Remove the plastic wrap and place the cake
+                pops on a plate lined with plastic wrap. Place in the freezer until firm (about 20 minutes).
+                <br>
+                Dip the lollipop sticks into some melted white chocolate and stick one into each cake pop. Return the
+                cake pops to the freezer for the chocolate to set (about 5 to 10 minutes).
+                <br>
+                Dunk the cake pops into the melted chocolate, gently tapping the lollipop stick to remove any excess
+                chocolate.
+                <br>
+                Sprinkle some rainbow sprinkles onto the top of the cake pops, then stick into a cake pop holder.
+                Transfer to the fridge so the chocolate coating can fully set (about 10 to 15 minutes).</span>
+              </p>
+              <br>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="myBtn">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" id="edit">Edit</button>
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
+
+        <script>
+          function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+              dots.style.display = "inline";
+              btnText.innerHTML = "View";
+              moreText.style.display = "none";
+            } else {
+              dots.style.display = "none";
+              btnText.innerHTML = "View less";
+              moreText.style.display = "inline";
+            }
+          }
+        </script>
 </body>
 
 </html>

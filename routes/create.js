@@ -4,11 +4,11 @@ var Pokemon = require('../db.json');
 var request = require("request");
 
 /* GET create page. */
-router.get('/', function(req, res, next) {
-  res.render('create', {message: false});
+router.get('/', function (req, res, next) {
+    res.render('create', { message: false });
 });
 
-router.post('/', function(req, res, next) {
+router.post('/', function (req, res, next) {
 
     //test if data is coming through
     // res.send(req.body);
@@ -18,17 +18,19 @@ router.post('/', function(req, res, next) {
 
     //make a post request to our database
     request({
-    uri: "http://localhost:8000/pokemon",
-    method: "POST",
-    form: {
-        id: id,
-        name: req.body.name,
-        image: req.body.image_url,
-    }
-    }, function(error, response, body) {
+        uri: "http://localhost:8000/pokemon",
+        method: "POST",
+        form: {
+            id: id,
+            name: req.body.name,
+            ingredients: req.body.ingredients,
+            recipe: req.body.recipe,
+            image: req.body.image_url,
+        }
+    }, function (error, response, body) {
         // console.log(body);
         //send a response message
-        res.render('create', {message: 'Successfully Added.'});
+        res.render('create', { message: 'Successfully Added.' });
     });
 })
 
