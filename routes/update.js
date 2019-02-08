@@ -26,7 +26,7 @@ update.addEventListener('click', function () {
         //make a post request to our database
         request({
             uri: "http://localhost:8000/pokemon/" + req.params.pokeId,
-            method: "PATCH",
+            method: "PUT",
             form: {
                 name: req.body.name,
                 image: req.body.image_url,
@@ -39,5 +39,7 @@ update.addEventListener('click', function () {
     })
 
 })
+
+
 
 module.exports = router;
