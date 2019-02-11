@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/create',createRouter);
+app.use('/create', createRouter);
 app.use('/archive', viewRouter);
 app.use('/update', updateRouter);
 app.use('/delete', deleteRouter);
@@ -59,7 +59,7 @@ app.use(express.urlencoded({
   res.render('error');
 });
 module.exports = app;
-app.listen(8080);
+app.listen(process.env.PORT || 8000);
 
 
 module.exports = app;

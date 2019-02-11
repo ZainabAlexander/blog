@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Pokemon = require('../db.json');
 var request = require("request");
-var update = document.getElementById('update');
+// var update = document.getElementById('update');
 
 /* GET create page. */
 router.get('/:pokeId', function (req, res, next) {
@@ -19,7 +19,8 @@ router.get('/:pokeId', function (req, res, next) {
 
 });
 
-update.addEventListener('click', function () {
+// update.addEventListener('click', function () 
+{
     router.post('/:pokeId', function (req, res, next) {
 
         // console.log(req.body)
@@ -38,7 +39,7 @@ update.addEventListener('click', function () {
         });
     })
 
-})
+}
 
 
 

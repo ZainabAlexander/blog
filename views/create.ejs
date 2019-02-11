@@ -11,11 +11,9 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-
     <!-- include summernote css/js -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
-
 </head>
 
 <body>
@@ -53,21 +51,21 @@
 
             <form method="POST" action="">
                 <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
-                    <label for="exampleInputName">Name of POST</label>
+                    <label for="exampleInputName">Title</label>
                     <input type="text" class="form-control click2edit" id="exampleInputName" aria-describedby="heroName"
-                        placeholder="Enter Hero Name" name="name">
+                        placeholder="Enter recipe Name" name="name">
                     <!-- <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small>  -->
                 </div>
-                <!-- <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
-                    <label for="exampleInputIngredients">ingredients</label>
-                    <input type="text" class="form-control click2edit" id="exampleInputIngredients" placeholder="Ingredients List"
+                <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <label for="exampleInputIngredients">Content</label>
+                    <input type="text" class="form-control click2edit" id="exampleInputIngredients" placeholder="Recipe Method"
                         name="ingredients">
                 </div>
 
                 <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
-                    <label for="exampleInputRecipe">recipe</label>
-                    <input type="text" class="form-control click2edit" id="exampleInputRecipe" placeholder="Recipe method"
-                        name="recipe"> -->
+                    <label for="exampleInputRecipe">Author</label>
+                    <input type="text" class="form-control click2edit" id="exampleInputRecipe" placeholder="Name of Author"
+                        name="recipe">
                 </div>
                 <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
                     <label for="exampleInputURL">Image URL</label>
@@ -87,6 +85,11 @@
     <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit </button>
     <button id="save" class="btn btn-primary" onclick="save()" type="button">Save </button>
 
+    <footer>
+
+        
+    </footer>
+
     <script>
         $(document).ready(function () {
             $('#summernote').summernote();
@@ -99,6 +102,8 @@
             $('.click2edit').summernote('destroy');
         };
     </script>
+
+
 
 </body>
 
